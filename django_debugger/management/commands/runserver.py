@@ -17,7 +17,7 @@ class Command(runserver.Command):
         )
 
     def run(self, *args, **options):
-        if getattr(settings, "ENABLE_DEBUGGER", False) or options["enable_debugger"]:
+        if getattr(settings, "DEBUGGER_ENABLE", False) or options["enable_debugger"]:
             if os.environ.get("RUN_MAIN") or os.environ.get("WERKZEUG_RUN_MAIN"):
                 import debugpy
 
