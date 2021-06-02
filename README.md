@@ -12,23 +12,23 @@ pip install django-debugger
 
 1. Prepend django_debugger to top of the **INSTALLED_APPS**
 
-```python
+    ```python
 
-INSTALLED_APPS = [
-    "django_debugger",
-    ...
-]
-```
+    INSTALLED_APPS = [
+        "django_debugger",
+        ...
+    ]
+    ```
 
 2. Add `--enable-debugger` argument to runserver command
 
-```bash
-python manage.py runserver ---enable-debugger 0.0.0.0:8000
-```
+    ```bash
+    python manage.py runserver ---enable-debugger 0.0.0.0:8000
+    ```
 
-**OR**
+    **OR**
 
-Add `DEBUGGER_ENABLE = True` to settings file.
+    Add `DEBUGGER_ENABLE = True` to settings file.
 
 # Settings Variables
 
