@@ -24,9 +24,9 @@ class Command(runserver.Command):
                 address = getattr(settings, "DEBUGGER_ADDRESS", "0.0.0.0")
                 port = getattr(settings, "DEBUGGER_PORT", 5678)
                 debugpy.listen(address=(address, port))
-                sys.stdout.write("Debugger: Listening at {}:{}".format(address, port))
+                print("Debugger: Listening at {}:{}".format(address, port))
                 if getattr(settings, "DEBUGGER_WAIT_FOR_ATTACH", False):
-                    sys.stdout.write("Debugger: Waiting for remote debugger to attach")
+                    print("Debugger: Waiting for remote debugger to attach")
                     debugpy.wait_for_client()
 
         super().run(*args, **options)

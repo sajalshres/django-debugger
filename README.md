@@ -2,15 +2,15 @@
 
 A simple plugin to attach a debugger in Django during runserver
 
-# Installation
+## Installation
 
 ```bash
 pip install django-debugger
 ```
 
-# Usage
+## Usage
 
-1. Prepend django_debugger to top of the **INSTALLED_APPS**
+1. Prepend django_debugger to **top** of the **INSTALLED_APPS**
 
     ```python
 
@@ -18,6 +18,12 @@ pip install django-debugger
         "django_debugger",
         ...
     ]
+
+    # Or if you have multiple settings configuration
+    INSTALLED_APPS = [ 
+        "django_debugger",
+        ... # custom development apps
+    ] + INSTALLED_APPS
     ```
 
 2. Add `--enable-debugger` argument to runserver command
@@ -30,7 +36,7 @@ pip install django-debugger
 
     Add `DEBUGGER_ENABLE = True` to settings file.
 
-# Settings Variables
+## Settings Variables
 
 - `DEBUGGER_ENABLE = True` : Attaches debugger.
 - `DEBUGGER_ADDRESS = "0.0.0.0"` : Address to listen for remote debugging
