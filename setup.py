@@ -11,7 +11,7 @@ README = (HERE / "README.md").read_text()
 setup(
   name = 'django-debugger',
   packages = find_packages(),
-  version = '0.4',
+  version = '0.5',
   license='MIT',
   description = 'A simple plugin to attach a debugger in Django during runserver',
   long_description = README,
