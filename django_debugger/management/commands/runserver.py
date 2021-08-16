@@ -28,7 +28,7 @@ class Command(runserver.Command):
                     debugpy.listen(address=(address, port))
                     print("Debugger: Listening at {}:{}".format(address, port))
                 except (OSError, RuntimeError):
-                    print("Debugger: Port {} already in use").format(port)
+                    print("Debugger: Port {} already in use".format(port))
 
                 if getattr(settings, "DEBUGGER_WAIT_FOR_ATTACH", False):
                     print("Debugger: Waiting for remote debugger to attach")
