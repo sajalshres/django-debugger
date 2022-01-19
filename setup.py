@@ -21,7 +21,7 @@ setup(
     url="https://github.com/sajalshres/django-debugger",
     keywords=["DJANGO", "DEBUGGER", "DEBUGPY", "PYTHON"],
     install_requires=[
-        "debugpy==1.3.0",
+        "debugpy>=1.3.0",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
